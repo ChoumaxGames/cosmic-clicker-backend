@@ -27,6 +27,7 @@ public abstract class AbstractBuilding implements IBuilding {
     }
 
     public void purchase() {
+
         this.countPurchases++;
     }
 

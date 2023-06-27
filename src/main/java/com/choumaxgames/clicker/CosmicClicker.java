@@ -1,6 +1,7 @@
 package com.choumaxgames.clicker;
 
 import com.choumaxgames.planets.IPlanet;
+import com.choumaxgames.players.PlayerRecord;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +45,16 @@ public class CosmicClicker implements IClicker {
         return this.currentPlanet;
     }
 
+    public PlayerRecord getPlayer() {
+        return null;
+    }
+
     public void setCurrentPlanet(IPlanet planet) {
         this.currentPlanet = planet;
+    }
+
+    public void setPlayer(PlayerRecord player) {
+
     }
 
     public long getEssences() {
