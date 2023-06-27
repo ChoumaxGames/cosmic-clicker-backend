@@ -5,12 +5,23 @@ import com.choumaxgames.resources.IResource;
 
 public interface IBuilding {
 
+    String getId();
+
     String getName();
+
+    String getDescription();
+
     Class<? extends IPlanet> getPlanet();
+
+    Class<? extends IResource> getResource();
+
     int getPrice();
+
     void purchase();
-    void setup(IResource resource);
+
     int getCountUpgrade();
+
     int getMultiplicator();
-    Class<? extends IResource> getRelatedResource();
+
+    void setup();
 }

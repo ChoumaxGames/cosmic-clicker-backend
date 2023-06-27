@@ -1,51 +1,34 @@
 package com.choumaxgames.buildings;
 
+import com.choumaxgames.Clicker.CosmicClicker;
 import com.choumaxgames.planets.IPlanet;
 import com.choumaxgames.planets.XyronPrime;
 import com.choumaxgames.resources.IResource;
 import com.choumaxgames.resources.crystals.SapCrystal;
 
-public class Arboretum implements IBuilding {
+public class Arboretum extends AbstractBuilding {
 
-    private int countPurchases = 0;
+    protected float initialMoneyGenerated = 5f;
+    protected float priceMultiplier       = 1.15f;
+    protected float initialPrice          = 100f;
+
+    public String getId() {
+        return "B-ARB";
+    }
 
     public String getName() {
         return "Arboretum";
     }
 
+    public String getDescription() {
+        return null;
+    }
 
     public Class<? extends IPlanet> getPlanet() {
         return XyronPrime.class;
     }
 
-    public void setup(IResource resource) {
-        resource.addMultiplier(this);
-    }
-
-    public int getPrice() {
-        float multiplicator = 1.15f;
-        float initialPrice = 100;
-        double price = initialPrice * (Math.pow(multiplicator, getCountUpgrade()));
-
-        return (int)price;
-    }
-
-    public void purchase() {
-        this.countPurchases++;
-    }
-
-    public int getCountUpgrade() {
-        return this.countPurchases;
-    }
-
-
-    public int getMultiplicator() {
-        int baseGenerated = 5;
-        double result = (getCountUpgrade() == 0) ? 0 : baseGenerated + getCountUpgrade() * 2;
-        return (int) result;
-    }
-
-    public Class<? extends IResource> getRelatedResource() {
+    public Class<? extends IResource> getResource() {
         return SapCrystal.class;
     }
 }

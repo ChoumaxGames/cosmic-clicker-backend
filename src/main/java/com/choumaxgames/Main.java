@@ -1,31 +1,32 @@
 package com.choumaxgames;
 
+import com.choumaxgames.Clicker.CosmicClicker;
+import com.choumaxgames.Clicker.IClicker;
 import com.choumaxgames.planets.XyronPrime;
-import com.choumaxgames.resources.crystals.SapCrystal;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        CosmicClicker cc = new CosmicClicker();
-        cc.addPlanet(new XyronPrime());
 
-        cc.getLastPlanet().run();
+        IClicker cosmicClicker = CosmicClicker.getInstance();
 
-        cc.getLastPlanet().getBuildings().get(0).purchase();
+        cosmicClicker.addPlanets(new XyronPrime());
+        cosmicClicker.setCurrentPlanet(cosmicClicker.getPlanetById(XyronPrime.PLANET_ID));
+        cosmicClicker.getCurrentPlanet().getBuildings().get(0).purchase();
+        cosmicClicker.getCurrentPlanet().run();
+
+
 
         boolean purchased = false;
 
         while(true) {
 
-            System.out.println(SapCrystal.getCount());
-            if(SapCrystal.getCount() > 500f && !purchased) {
+            System.out.println("Essences: " + cosmicClicker.getCurrentPlanet().getCrystals());
+            if(cosmicClicker.getCurrentPlanet().getCrystals() > 30f && !purchased) {
                 purchased = true;
-                cc.getLastPlanet().getBuildings().get(0).purchase();
+                cosmicClicker.getCurrentPlanet().getBuildings().get(0).purchase();
             }
 
             Thread.sleep(950);
-
-
-
         }
     }
 }
