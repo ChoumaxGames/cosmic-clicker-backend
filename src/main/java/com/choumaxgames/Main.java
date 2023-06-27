@@ -1,7 +1,7 @@
 package com.choumaxgames;
 
-import com.choumaxgames.Clicker.CosmicClicker;
-import com.choumaxgames.Clicker.IClicker;
+import com.choumaxgames.clicker.CosmicClicker;
+import com.choumaxgames.clicker.IClicker;
 import com.choumaxgames.planets.XyronPrime;
 
 public class Main {
@@ -19,7 +19,6 @@ public class Main {
         boolean purchased = false;
 
         while(true) {
-
             System.out.println("Essences: " + cosmicClicker.getCurrentPlanet().getCrystals());
             if(cosmicClicker.getCurrentPlanet().getCrystals() > 30f && !purchased) {
                 purchased = true;

@@ -1,4 +1,4 @@
-package com.choumaxgames.Clicker;
+package com.choumaxgames.clicker;
 
 import com.choumaxgames.planets.IPlanet;
 

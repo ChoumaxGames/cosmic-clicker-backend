@@ -1,6 +1,5 @@
 package com.choumaxgames.resources;
 
-import com.choumaxgames.Clicker.CosmicClicker;
 import com.choumaxgames.buildings.IBuilding;
 
 import java.util.ArrayList;

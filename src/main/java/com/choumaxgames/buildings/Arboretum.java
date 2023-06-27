@@ -1,6 +1,5 @@
 package com.choumaxgames.buildings;
 
-import com.choumaxgames.Clicker.CosmicClicker;
 import com.choumaxgames.planets.IPlanet;
 import com.choumaxgames.planets.XyronPrime;
 import com.choumaxgames.resources.IResource;

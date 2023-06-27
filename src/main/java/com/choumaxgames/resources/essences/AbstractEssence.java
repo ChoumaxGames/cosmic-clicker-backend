@@ -1,6 +1,6 @@
 package com.choumaxgames.resources.essences;
 
-import com.choumaxgames.Clicker.CosmicClicker;
+import com.choumaxgames.clicker.CosmicClicker;
 import com.choumaxgames.buildings.IBuilding;
 import com.choumaxgames.resources.AbstractResource;
 

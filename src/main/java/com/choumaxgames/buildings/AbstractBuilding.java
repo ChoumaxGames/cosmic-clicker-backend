@@ -1,10 +1,8 @@
 package com.choumaxgames.buildings;
 
-import com.choumaxgames.Clicker.CosmicClicker;
+import com.choumaxgames.clicker.CosmicClicker;
 import com.choumaxgames.planets.IPlanet;
-import com.choumaxgames.planets.XyronPrime;
 import com.choumaxgames.resources.IResource;
-import com.choumaxgames.resources.crystals.SapCrystal;
 
 public abstract class AbstractBuilding implements IBuilding {
 
